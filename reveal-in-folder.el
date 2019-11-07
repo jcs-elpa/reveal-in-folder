@@ -54,12 +54,7 @@
       (reveal-in-folder--safe-execute-p "open ."))
      ;; Linux
      ((eq system-type 'gnu/linux)
-      (cond
-       ((reveal-in-folder--safe-execute-p "nautilus ."))
-       ((reveal-in-folder--safe-execute-p "nemo ."))
-       ((reveal-in-folder--safe-execute-p "caja ."))
-       ((reveal-in-folder--safe-execute-p "thunar ."))
-       (t (user-error "[USER-ERROR] No desktop environment detected"))))
+      (reveal-in-folder--safe-execute-p "xdg-open ."))
      ;; BSD
      ((or (eq system-type 'darwin) (eq system-type 'berkeley-unix))
       ;; TODO: Not sure what else command do I need to make it work in BSD.
