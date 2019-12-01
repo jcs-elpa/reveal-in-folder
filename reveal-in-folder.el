@@ -1,4 +1,4 @@
-;;; reveal-in-folder.el --- Reveal current file in folder.  -*- lexical-binding: t; -*-
+;;; reveal-in-folder.el --- Reveal current file in folder  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019  Shen, Jen-Chieh
 ;; Created date 2019-11-06 23:14:19
