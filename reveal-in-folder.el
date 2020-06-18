@@ -7,8 +7,8 @@
 ;; Description: Reveal current file in folder.
 ;; Keyword: folder finder reveal file explorer
 ;; Version: 0.0.2
-;; Package-Requires: ((emacs "24.3") (f "0.20.0"))
-;; URL: https://github.com/jcs090218/reveal-in-folder
+;; Package-Requires: ((emacs "24.3") (f "0.20.0") (s "1.12.0"))
+;; URL: https://github.com/jcs-elpa/reveal-in-folder
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -34,7 +34,18 @@
 
 (require 'f)
 (require 'ffap)
+(require 's)
 
+(defgroup reveal-in-folder nil
+  "Reveal current file in folder."
+  :prefix "reveal-in-folder-"
+  :group 'tool
+  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/reveal-in-folder"))
+
+(defcustom reveal-in-folder-select-file t
+  "Select the file when shown in file manager."
+  :type 'boolean
+  :group 'reveal-in-folder)
 
 (defun reveal-in-folder--safe-execute-p (in-cmd)
   "Correct way to check if IN-CMD execute with or without errors."
@@ -44,22 +55,34 @@
 (defun reveal-in-folder--signal-shell (path)
   "Send the shell command by PATH."
   (let ((default-directory
-          (if path (f-dirname (expand-file-name path)) default-directory)))
+          (if path (f-dirname (expand-file-name path)) default-directory))
+        (buf-name (if reveal-in-folder-select-file
+                      (shell-quote-argument (expand-file-name (buffer-file-name)))
+                    nil))
+        (cmd nil))
     (cond
      ;; Windows
      ((memq system-type '(cygwin windows-nt ms-dos))
-      (reveal-in-folder--safe-execute-p "explorer ."))
+      (setq cmd "explorer .")
+      (when buf-name
+        (setq buf-name (s-replace "/" "\\" buf-name))
+        (setq cmd (format "explorer /select,%s" buf-name))))
      ;; macOS
      ((eq system-type 'darwin)
-      (reveal-in-folder--safe-execute-p "open ."))
+      (setq cmd "open .")
+      (when buf-name
+        (setq cmd (format "open -R %s" buf-name))))
      ;; Linux
      ((eq system-type 'gnu/linux)
-      (reveal-in-folder--safe-execute-p "xdg-open ."))
+      (setq cmd "xdg-open ."))
      ;; BSD
-     ((or (eq system-type 'darwin) (eq system-type 'berkeley-unix))
+     ((eq system-type 'berkeley-unix)
       ;; TODO: Not sure what else command do I need to make it work in BSD.
-      (reveal-in-folder--safe-execute-p "open ."))
-     (t (error "[ERROR] Unknown Operating System type")))))
+      (setq cmd "open .")
+      (when buf-name
+        (setq cmd (format "open -R %s" buf-name))))
+     (t (error "[ERROR] Unknown Operating System type")))
+    (when cmd (reveal-in-folder--safe-execute-p cmd))))
 
 ;;;###autoload
 (defun reveal-in-folder-at-point ()
@@ -78,7 +101,6 @@
   "Reveal buffer/path depends on cursor condition."
   (interactive)
   (if (ffap-file-at-point) (reveal-in-folder-at-point) (reveal-in-folder-this-buffer)))
-
 
 (provide 'reveal-in-folder)
 ;;; reveal-in-folder.el ends here
