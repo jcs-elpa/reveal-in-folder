@@ -74,7 +74,9 @@
         (setq cmd (format "open -R %s" buf-name))))
      ;; Linux
      ((eq system-type 'gnu/linux)
-      (setq cmd "xdg-open ."))
+      (setq cmd "xdg-open .")
+      ;; TODO: I don't think Linux has defualt way to do it across all distro.
+      )
      ;; BSD
      ((eq system-type 'berkeley-unix)
       ;; TODO: Not sure what else command do I need to make it work in BSD.
