@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/jcs090218/reveal-in-folder.svg?branch=master)](https://travis-ci.com/jcs090218/reveal-in-folder)
+[![Build Status](https://travis-ci.com/jcs-elpa/reveal-in-folder.svg?branch=master)](https://travis-ci.com/jcs-elpa/reveal-in-folder)
 [![MELPA](https://melpa.org/packages/reveal-in-folder-badge.svg)](https://melpa.org/#/reveal-in-folder)
 [![MELPA Stable](https://stable.melpa.org/packages/reveal-in-folder-badge.svg)](https://stable.melpa.org/#/reveal-in-folder)
 [![Release Tag](https://img.shields.io/github/tag/jcs-elpa/reveal-in-folder.svg?label=release)](https://github.com/jcs-elpa/reveal-in-folder/releases/latest)
