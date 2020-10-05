@@ -4,16 +4,13 @@
 [![Release Tag](https://img.shields.io/github/tag/jcs-elpa/reveal-in-folder.svg?label=release)](https://github.com/jcs-elpa/reveal-in-folder/releases/latest)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-
 # reveal-in-folder
 > Reveal current file in folder.
-
 
 ## Differences from other alternatives
 
 * [reveal-in-osx-finder](https://github.com/kaz-yos/reveal-in-osx-finder)
   - Only work in OSX.
-
 
 ## Usage
 
@@ -22,7 +19,6 @@ Here are some functions that you could use in different condition.
 * `reveal-in-folder` [DEFAULT]
 * `reveal-in-folder-this-buffer`
 * `reveal-in-folder-at-point`
-
 
 ## Contribution
 
