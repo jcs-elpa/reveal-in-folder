@@ -21,15 +21,13 @@
                       (shell-quote-argument (expand-file-name (buffer-file-name)))
                     nil))
         cmd)
-    (message "path: %s" path)
-    (message "buf-name: %s" buf-name)
     (cond
      ;; Windows
      ((memq system-type '(cygwin windows-nt ms-dos))
       (cond (buf-name
              (setq buf-name (s-replace "/" "\\" buf-name))
              (setq cmd (format "explorer /select,%s" buf-name)))
-            ((file-directory-p path)
+            ((ignore-errors (file-directory-p path))
              (setq path (s-replace "/" "\\" path))
              (setq cmd (format "explorer /select,%s" path)))
             (t (setq cmd "explorer ."))))
@@ -37,7 +35,7 @@
      ((eq system-type 'darwin)
       (cond (buf-name
              (setq cmd (format "open -R %s" buf-name)))
-            ((file-directory-p path)
+            ((ignore-errors (file-directory-p path))
              (setq cmd (format "open -R %s" path)))
             (t (setq cmd "open ."))))
      ;; Linux
@@ -51,7 +49,7 @@
       (setq cmd "open .")
       (cond (buf-name
              (setq cmd (format "open -R %s" buf-name)))
-            ((file-directory-p path)
+            ((ignore-errors (file-directory-p path))
              (setq cmd (format "open -R %s" path)))
             (t (setq cmd "open ."))))
      (t (error "[ERROR] Unknown Operating System type")))
