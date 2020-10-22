@@ -12,4 +12,4 @@
 ;; (@* "Test" )
 ;;
 
-(reveal-in-folder)
+(reveal-in-folder-this-buffer)
