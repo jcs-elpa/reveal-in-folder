@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Reveal current file in folder.
 ;; Keyword: folder finder reveal file explorer
-;; Version: 0.1.0
+;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.3") (f "0.20.0") (s "1.12.0"))
 ;; URL: https://github.com/jcs-elpa/reveal-in-folder
 
@@ -98,7 +98,7 @@
 (defun reveal-in-folder-at-point ()
   "Reveal the current file in folder at point."
   (interactive)
-  (reveal-in-folder--signal-shell (ffap-file-at-point)))
+  (reveal-in-folder--signal-shell (ffap-guesser)))
 
 ;;;###autoload
 (defun reveal-in-folder-this-buffer ()
