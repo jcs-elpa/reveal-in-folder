@@ -2,14 +2,14 @@
 ;; (@* "Prepare" )
 ;;
 
-(load-file (expand-file-name "./scripts/pkg-prepare.el"))
+(add-to-list 'load-path "./")
+(require 'pkg-prepare)
 
 (jcs-ensure-package-installed '(f s) t)
-
-(load-file (expand-file-name "./reveal-in-folder.el"))
 
 ;;
 ;; (@* "Test" )
 ;;
 
+(require 'reveal-in-folder)
 (reveal-in-folder)

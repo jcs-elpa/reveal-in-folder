@@ -1,3 +1,7 @@
+;;; pkg-prepare.el --- Prepare for package initialization  -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -27,3 +31,6 @@
   ;; STUDY: Not sure if you need this?
   (when (get 'jcs-package-install 'state)
     (package-initialize)))
+
+(provide 'pkg-prepare)
+;;; pkg-prepare.el ends here
