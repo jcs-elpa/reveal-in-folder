@@ -56,8 +56,8 @@
   "Send the shell command by PATH."
   (let ((default-directory
           (if path (f-dirname (expand-file-name path)) default-directory))
-        (buf-name (if (and reveal-in-folder-select-file (buffer-file-name))
-                      (shell-quote-argument (expand-file-name (buffer-file-name)))
+        (buf-name (if (and reveal-in-folder-select-file path)
+                      (shell-quote-argument (expand-file-name path))
                     nil))
         cmd)
     (cond
