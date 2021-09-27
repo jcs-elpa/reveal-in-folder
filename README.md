@@ -1,10 +1,11 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![MELPA](https://melpa.org/packages/reveal-in-folder-badge.svg)](https://melpa.org/#/reveal-in-folder)
 [![MELPA Stable](https://stable.melpa.org/packages/reveal-in-folder-badge.svg)](https://stable.melpa.org/#/reveal-in-folder)
-![CI](https://github.com/jcs-elpa/reveal-in-folder/workflows/CI/badge.svg)
 
 # reveal-in-folder
 > Reveal current file in folder.
+
+![CI](https://github.com/jcs-elpa/reveal-in-folder/workflows/CI/badge.svg)
 
 ## Differences from other alternatives
 
