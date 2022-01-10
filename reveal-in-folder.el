@@ -64,11 +64,11 @@
      ;; Windows
      ((memq system-type '(cygwin windows-nt ms-dos))
       (cond (buf-name
-             (setq buf-name (s-replace "/" "\\" buf-name))
-             (setq cmd (format "explorer /select,%s" buf-name)))
+             (setq buf-name (s-replace "/" "\\" buf-name)
+                   cmd (format "explorer /select,%s" buf-name)))
             ((ignore-errors (file-directory-p path))
-             (setq path (s-replace "/" "\\" path))
-             (setq cmd (format "explorer /select,%s" path)))
+             (setq path (s-replace "/" "\\" path)
+                   cmd (format "explorer /select,%s" path)))
             (t (setq cmd "explorer ."))))
      ;; macOS
      ((eq system-type 'darwin)
