@@ -5,7 +5,7 @@
 # reveal-in-folder
 > Reveal current file in folder.
 
-![CI](https://github.com/jcs-elpa/reveal-in-folder/workflows/CI/badge.svg)
+[![CI](https://github.com/jcs-elpa/reveal-in-folder/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/reveal-in-folder/actions/workflows/test.yml)
 
 ## Differences from other alternatives
 
