@@ -7,7 +7,7 @@
 ;; URL: https://github.com/jcs-elpa/reveal-in-folder
 ;; Version: 0.1.2
 ;; Package-Requires: ((emacs "24.3") (f "0.20.0") (s "1.12.0"))
-;; Keywords: folder finder reveal file explorer
+;; Keywords: convenience folder finder reveal file explorer
 
 ;; This file is NOT part of GNU Emacs.
 
