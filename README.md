@@ -6,6 +6,7 @@
 > Reveal current file in folder.
 
 [![CI](https://github.com/jcs-elpa/reveal-in-folder/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/reveal-in-folder/actions/workflows/test.yml)
+[![Activate](https://github.com/jcs-elpa/reveal-in-folder/actions/workflows/activate.yml/badge.svg)](https://github.com/jcs-elpa/reveal-in-folder/actions/workflows/activate.yml)
 
 ## Differences from other alternatives
 
