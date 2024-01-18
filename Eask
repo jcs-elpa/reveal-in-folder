@@ -1,6 +1,6 @@
 (package "reveal-in-folder"
          "0.1.2"
-         "Reveal current file in folder")
+         "Reveal current file/directory in folder")
 
 (website-url "https://github.com/jcs-elpa/reveal-in-folder")
 (keywords "convenience" "folder" "finder" "reveal" "file" "explorer")
