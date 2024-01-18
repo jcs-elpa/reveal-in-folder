@@ -1,4 +1,4 @@
-;;; reveal-in-folder.el --- Reveal current file in folder  -*- lexical-binding: t; -*-
+;;; reveal-in-folder.el --- Reveal current file/directory in folder  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019-2024  Shen, Jen-Chieh
 ;; Created date 2019-11-06 23:14:19
@@ -26,7 +26,7 @@
 
 ;;; Commentary:
 ;;
-;; Reveal current file in folder.
+;; Reveal current file/directory in folder.
 ;;
 
 ;;; Code:
@@ -36,7 +36,7 @@
 (require 's)
 
 (defgroup reveal-in-folder nil
-  "Reveal current file in folder."
+  "Reveal current file/directory in folder."
   :prefix "reveal-in-folder-"
   :group 'tool
   :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/reveal-in-folder"))
