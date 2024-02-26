@@ -51,10 +51,11 @@
   (let ((inhibit-message t) (message-log-max nil))
     (= 0 (shell-command in-cmd))))
 
-(defun reveal-in-folder--signal-shell (path)
-  "Send the shell command by PATH."
+;;;###autoload
+(defun reveal-in-folder-open (path)
+  "Reveal folder in PATH."
   (let ((default-directory
-          (if path (f-dirname (expand-file-name path)) default-directory))
+         (if path (f-dirname (expand-file-name path)) default-directory))
         (buf-name (if (and reveal-in-folder-select-file path)
                       (shell-quote-argument (expand-file-name path))
                     nil))
@@ -97,13 +98,13 @@
 (defun reveal-in-folder-at-point ()
   "Reveal the current file in folder at point."
   (interactive)
-  (reveal-in-folder--signal-shell (ffap-guesser)))
+  (reveal-in-folder-open (ffap-guesser)))
 
 ;;;###autoload
 (defun reveal-in-folder-this-buffer ()
   "Reveal the current buffer in folder."
   (interactive)
-  (reveal-in-folder--signal-shell (buffer-file-name)))
+  (reveal-in-folder-open (buffer-file-name)))
 
 ;;;###autoload
 (defun reveal-in-folder ()
