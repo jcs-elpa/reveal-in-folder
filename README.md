@@ -1,4 +1,5 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![JCS-ELPA](https://raw.githubusercontent.com/jcs-emacs/badges/master/elpa/v/reveal-in-folder.svg)](https://jcs-emacs.github.io/jcs-elpa/#/reveal-in-folder)
 [![MELPA](https://melpa.org/packages/reveal-in-folder-badge.svg)](https://melpa.org/#/reveal-in-folder)
 [![MELPA Stable](https://stable.melpa.org/packages/reveal-in-folder-badge.svg)](https://stable.melpa.org/#/reveal-in-folder)
 
