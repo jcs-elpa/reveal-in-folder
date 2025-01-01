@@ -1,6 +1,6 @@
 ;;; reveal-in-folder.el --- Reveal current file/directory in folder  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2024  Shen, Jen-Chieh
+;; Copyright (C) 2019-2025  Shen, Jen-Chieh
 ;; Created date 2019-11-06 23:14:19
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
