@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "reveal-in-folder"
          "0.1.2"
          "Reveal current file/directory in folder")
